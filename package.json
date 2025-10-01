@@ -1,0 +1,25 @@
+{
+  "name": "qa-engineer-assignment",
+  "version": "1.0.0",
+  "description": "A qa engineer assignment to evaluate skills in manual and automated testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "Bella Eleftheria",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^4.17.21",
+    "typescript": "^5.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "qa-engineer-assignment-master"
+  }
+}
