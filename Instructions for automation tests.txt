@@ -1,0 +1,78 @@
+The tests were developed in the Visual Studio Proessional 2022 with Selenium WebDriver and Cypress 
+
+// Selenium WebDriver version: 4.35.0
+// Selenium Support version: 4.35.0
+// SeleniumExtras.WaitHelpers version: 1.0.2
+
+// Cypress package version: 15.3.0
+// Cypress binary version: 15.3.0
+// Electron version: 36.8.1
+// Bundled Node version: 22.18.0
+
+NOTE: The main focus of the tests was the Visual Studio version, since I am more familiar with the specific tool.
+However, I wanted to try and adjust the test in Cypress as well, as an attempt to use a different tool
+
+// Visual Studio instructions
+1. Open the Project
+Launch Visual Studio.
+Open the solution (.sln file) that contains your automation test project.
+
+2. Build the Solution
+From the top menu, click Build > Build Solution (or press Ctrl + Shift + B).
+Make sure the project builds without errors.
+
+3. Open Test Explorer
+Go to Test > Test Explorer in the top menu.
+The Test Explorer window will open (this lists all available tests in your project).
+
+4. Run Tests
+You have several options to run tests:
+Run All Tests → In Test Explorer, click Run All Tests (green play button).
+Run Selected Tests → Right-click on a specific test and choose Run Selected Tests.
+Debug Tests → Right-click and choose Debug Selected Tests if you want to step through code.
+
+5. View Test Results
+After execution, results appear in Test Explorer:
+✅ Green check → Passed
+❌ Red cross → Failed
+⚠️ Yellow warning → Skipped or Inconclusive
+Click on a failed test to view detailed error logs/stack trace.
+
+6. Optional: Run Tests from Command Line
+Open Developer Command Prompt for Visual Studio.
+Navigate to your project folder.
+Run tests using:
+vstest.console.exe <path-to-your-test-dll>
+
+Example:
+vstest.console.exe bin\Debug\net6.0\MyAutomationTests.dll
+
+// Cypress instructions
+1. Navigate to the project folder
+Launch Visual Studio Code
+Open the project 
+
+2. Build and run the application
+Install the dependencies
+   ```bash
+   npm install
+Run the application
+   ```bash
+   npx tsc
+   npm start   
+The app should start and the login page should be displayed in a browser window
+
+3. Run all tests suites
+In a different terminal, type 'npx cypress run' if you want to run all test suites at once. The tests will start executing and the results with the failing and succeeding tests will e loaded
+
+4. Run test suites separately
+If you want to run the three different suites separately, type:
+- npx cypress run --spec "cypress/e2e/login.cy.js" for the login tests
+- npx cypress run --spec "cypress/e2e/mfa.cy.js" for the mfa tests
+- npx cypress run --spec "cypress/e2e/cookies.cy.js" for the cookeis and authentication tests
+
+5. View Test Results
+In the terminal that the command was executed, the results will be fully visible divided by class
+
+6. Exit/ Stop Execution
+To exit, just close the terminal windows or Visual Studio Code. To stop execution, enter Ctr + C in the terminal(s)
